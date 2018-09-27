@@ -13,12 +13,12 @@ const contacts = [
     },
     {
         name: "Ronaldo",
-        image: "ronaldo.jpg",
+        image: "ronaldo2.jpg",
         lastMsg: "blah blah blah blah blah blah",
         lastMsgTime: "Today",
         lastMsgStatus: "sent",
         number: "4251365",
-        email: "ronalso7@gmail.com",
+        email: "ronaldo7@gmail.com",
         icon1: `<i class="fas fa-phone" ></i>`,
 	    icon2: `<i class="far fa-envelope" id="mail"></i>`        
 
@@ -29,13 +29,13 @@ const contacts = [
         lastMsgTime: "Yesterday",
         lastMsgStatus: "seen",
         number: "1237471",
-        email: "kingamir3@gmail.com",
+        email: "amir3@gmail.com",
         icon1: `<i class="fas fa-phone" ></i>`,
 	    icon2: `<i class="far fa-envelope" id="mail"></i>`        
 
     },    {
         name: "Waseem Akram",
-        image: "kaleem6.jpg",
+        image: "",
         lastMsg: "blah blah blah blah blah blah",
         lastMsgTime: "Yesterday",
         lastMsgStatus: "not sent",
@@ -46,7 +46,7 @@ const contacts = [
 
     },    {
         name: "Mustafa Ali",
-        image: "mustafa.jpg",
+        image: "ali.jpg",
         lastMsg: "blah blah blah blah blah blah",
         lastMsgTime: "Yesterday",
         lastMsgStatus: "seen",
@@ -68,7 +68,7 @@ const contacts = [
 
     },    {
         name: "Aisam-Ul-Haq",
-        image: "aisam.jpg",
+        image: "aisam2.jpg",
         lastMsg: "blah blah blah blah blah blah",
         lastMsgTime: "Yesterday",
         lastMsgStatus: "seen",
@@ -79,7 +79,7 @@ const contacts = [
 
     },    {
         name: "Usain",
-        image: "afridi3.jpg",
+        image: "",
         lastMsg: "blah blah blah blah blah blah",
         lastMsgTime: "Yesterday",
         lastMsgStatus: "sent",
@@ -117,22 +117,33 @@ function initialize(){
         contactsListEl.innerHTML += 
 
         `
-        <div class="person-item">
-            <div class="person-img" style="background-image: url(images/${contacts[i].image})"></div>
-            <div class="person-det">
-                <div class="content-center">
-                    <h4 class="name">${contacts[i].name}</h4>
-                    <div class="msg-con">
-                        <i class="fas fa-${icon}"></i>
-                        <p class="msg">${contacts[i].lastMsg}</p>
+            <section class="person-item" onclick="changePerson(${i})">
+                <div class="person-img" style="background-image: url(images/${contacts[i].image})"></div>
+                <div class="person-det">
+                    <div class="content-center">
+                        <h4 class="name">${contacts[i].name}</h4>
+                        <div class="msg-con">
+                            <i class="fas fa-${icon}"></i>
+                            <p class="msg">${contacts[i].lastMsg}</p>
+                        </div>
                     </div>
+                    <p class="time">${contacts[i].lastMsgTime}</p>
                 </div>
-                <p class="time">${contacts[i].lastMsgTime}</p>
-            </div>
-        </div>
-
+            </section>
 
         
         `
     }
+}
+function changePerson(personIndex){
+	document.querySelector("#person-name").innerHTML = contacts[personIndex].name;
+	document.querySelector("#person-num, #phone").innerHTML = contacts[personIndex].icon1 + contacts[personIndex].number;
+	document.querySelector("#person-img").style["background-image"] = `url(images/${contacts[personIndex].image})`;
+	document.querySelector("#email, #mail").innerHTML = contacts[personIndex].icon2 + contacts[personIndex].email;
+	// document.querySelector("#last-msg").innerHTML = contacts[personIndex].lastMsg;
+	document.querySelector(".hint").style.display = "none";
+	
+	
+	
+	
 }

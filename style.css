@@ -55,6 +55,38 @@ i{
 .fa-check-double{
     color: #00ccff;
 }
-.contacts-det{
+.main{
     display: flex;
+
+}
+.contacts-det{
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    margin-top: 7em;
+    margin-left: 7em;
+}
+#person-img{
+	height: 170px;
+	width: 170px;
+	background-size: contain;
+	background-position: center;
+    background-repeat: no-repeat; 
+    border-radius: 1000px;
+}
+#person-name{
+	color: #444040;
+	font-size: 1.5em;
+
+}
+.fa-envelope:before {
+	color: purple;
+    font-size: 25px;
+    padding-right: 15px;
+	
+}
+.fa-phone:before{
+	color: green;
+    font-size: 25px;
+    padding-right: 15px;
 }
