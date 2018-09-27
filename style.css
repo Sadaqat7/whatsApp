@@ -1,0 +1,60 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.person-img{
+    height: 60px;
+    width: 60px;
+    background-image: url(images/person.png);
+    background-position: center;
+    background-size: cover;
+    background-color: #dde7e8;
+    border-radius: 1000px;
+    margin-right: 1em;
+}
+.person-item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 1em;
+    width: 400px;
+}
+.person-det p{
+    margin: 0;
+}
+.person-det{
+    display: flex;
+    align-items: flex-start;
+}
+h4{
+    color: rgba(0,0,0,0.8);
+}
+.msg{
+    color: rgba(0,0,0,0.5);
+}
+.time{
+    font-size: 0.7em;
+    color: rgb(0,0,0,0.6);
+}
+.content-center > *{
+    margin: 0;
+}
+.content-center > h4{
+    margin-bottom: 5px;
+}
+.msg-con{
+    display: flex;
+
+}
+i{
+    margin-right: 5px;
+    color: rgba(0,0,0,0.4);
+}
+.person-item{
+    cursor: pointer;
+}
+.fa-check-double{
+    color: #00ccff;
+}
+.contacts-det{
+    display: flex;
+}
